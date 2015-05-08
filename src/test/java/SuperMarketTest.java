@@ -18,7 +18,7 @@ public class SuperMarketTest {
         SuperMarket.setPriceOfItemB(10);
         assertEquals(SuperMarket.checkOut("ABBACBBAB"), 24 + 15);
     }
-    
+
     @org.junit.Test
     public void testCountLetter() throws Exception {
         assertEquals(SuperMarket.countLetter("AAA", "A"), 3);
