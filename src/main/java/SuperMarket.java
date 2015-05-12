@@ -12,14 +12,13 @@ public class SuperMarket {
     private static int priceOfItemB = 50;
     private static int priceOfItemC = 30;
 
-    public SuperMarket(int a,int b, int c) {
+    public SuperMarket(int a, int b, int c) {
         priceOfItemA = a;
         priceOfItemB = b;
         priceOfItemC = c;
     }
 
     public static void main(String[] args) {
-        System.out.println(checkOut("ABBACBBABasdf"));
     }
 
     public static int checkOut(String items) {
@@ -53,7 +52,7 @@ public class SuperMarket {
                 unknownItems.add(item);
             }
         }
-        if(!unknownItems.isEmpty()) {
+        if (!unknownItems.isEmpty()) {
             System.out.println("These items are not valid " + unknownItems);
         }
     }
