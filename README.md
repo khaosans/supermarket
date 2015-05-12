@@ -17,7 +17,7 @@ ItemB = 50
 ItemC = 30
 ```
 
-For item 3 there is a special which says if you buy 5 items, you will only need to pay for the price 3 of them.  Other than that, its face value for each item.
+In the case of ItemB, there is a special which says if you buy 5 item B's, you will only need to pay for the price 3 of item B's.  Other than that, its face value for each item.
 
 The value of these items can be set using the constructor when instantiating new objects or by using the setters for each item.
 
