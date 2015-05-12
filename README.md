@@ -27,4 +27,29 @@ The value of these items can be set using the constructor when instantiating new
 
 ```mvn clean install```
 
+## Usage
+
+In the SuperMarket.java main you can call the method checkout on any string of products (A,B or C):
+
+```
+System.out.println(SuperMarket.checkOut("ABBACBBAB"));
+```
+
+Used to instantiate another supermarket with non-default prices (Item A, Item B, Item C):
+
+```
+new SuperMarket(1,2,3);
+```
+
+Change prices of the supermarket:
+
+```
+new SuperMarket(1,2,3);
+setPriceOfItemA(10);
+setPriceOfItemB(20);
+setPriceOfItemC(30)
+```
+
+
+
 
