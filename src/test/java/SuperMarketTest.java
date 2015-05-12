@@ -6,7 +6,11 @@ public class SuperMarketTest {
     public void testCheckOut() throws Exception {
         assertEquals(SuperMarket.checkOut("ABBACBBAB"), 240);
         assertEquals(SuperMarket.checkOut(""), 0);
-        assertEquals(SuperMarket.checkOut("ABBACBBAB"), 240);
+        assertEquals(SuperMarket.checkOut("ABBACBBABB"), 290);
+        assertEquals(SuperMarket.checkOut("A"), SuperMarket.getPriceOfItemA());
+        assertEquals(SuperMarket.checkOut("B"), SuperMarket.getPriceOfItemB());
+        assertEquals(SuperMarket.checkOut("C"), SuperMarket.getPriceOfItemC());
+        assertEquals(SuperMarket.checkOut("BBBBBB"),4 * SuperMarket.getPriceOfItemB());
     }
 
     @org.junit.Test
