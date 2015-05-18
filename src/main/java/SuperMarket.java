@@ -19,6 +19,7 @@ public class SuperMarket {
     }
 
     public static void main(String[] args) {
+        //SuperMarket.checkOut("asd");
     }
 
     public static int checkOut(String items) {
@@ -46,15 +47,15 @@ public class SuperMarket {
     //Checks for items that are not A,B,C and displays them
     public static void validateItems(String items) {
         String[] array = items.split("");
-        List<String> unknownItems = new LinkedList<>();
-        for (String item : array) {
-            if (!item.equals("A") && !item.equals("B") && !item.equals("C") && !item.equals("")) {
-                unknownItems.add(item);
-            }
+        String s = Arrays.toString(Arrays.stream(array)
+                .filter(x -> !Objects.equals(x, "A"))
+                .filter(x -> !Objects.equals(x, "B"))
+                .filter(x -> !Objects.equals(x, "C")).toArray());
+
+        if (!s.equals("[]")) {
+            System.out.println("These items are not valid " + s);
         }
-        if (!unknownItems.isEmpty()) {
-            System.out.println("These items are not valid " + unknownItems);
-        }
+
     }
 
     public static int getPriceOfItemA() {
